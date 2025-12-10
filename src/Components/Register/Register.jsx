@@ -1,12 +1,13 @@
-import { Link, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import './Register.css'
 
 function Register() {
   const navigate = useNavigate()
+  const location = useLocation()
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    email: location.state?.email || '',
     password: '',
     confirmPassword: ''
   })
@@ -24,18 +25,16 @@ function Register() {
       alert('Passwords do not match!')
       return
     }
-    // Add your registration logic here
     console.log('Registration attempt:', formData)
-    // For now, redirect to login page
     navigate('/login')
   }
 
   return (
     <div className="register">
-      <header className="register-header container-fluid px-4 px-lg-5 py-4 d-flex justify-content-between align-items-center">
+      <header className="register-header container-fluid px-4 px-lg-5 py-3 d-flex justify-content-between align-items-center">
         <Link to="/">
           <img 
-            src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" 
+            src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" 
             alt="Netflix" 
             className="register-logo"
           />

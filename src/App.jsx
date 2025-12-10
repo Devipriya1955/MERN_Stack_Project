@@ -1,70 +1,35 @@
-// import { Routes, Route } from 'react-router-dom'
-// import Nav from './Components/Nav/Nav'
-// import Landing from './pages/Landing/Landing'
-// import Login from './Components/Login/Login'
-// import Register from './Components/Register/Register'
-// import Home from './pages/Home'
-// import TVShows from './pages/TVShows'
-// import Movies from './pages/Movies'
-// import NewPopular from './pages/NewPopular'
-// import MyList from './pages/MyList'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import Landing from './Components/Landing/Landing'
+import Login from './Components/Login/Login'
+import Register from './Components/Register/Register'
+import Home from './Components/Home/Home'
 
-// export default function App() {
-//   return (
-//     <>
-//       <Routes>
-//         <Route path="/" element={<Landing />} />
-//         <Route path="/login" element={<Login />} />
-//         <Route path="/register" element={<Register />} />
-//         <Route path="/home" element={<><Nav /><Home /></>} />
-//         <Route path="/tv-shows" element={<><Nav /><TVShows /></>} />
-//         <Route path="/movies" element={<><Nav /><Movies /></>} />
-//         <Route path="/new-popular" element={<><Nav /><NewPopular /></>} />
-//         <Route path="/my-list" element={<><Nav /><MyList /></>} />
-//       </Routes>
-//     </>
-//   )
-// }
-// import { Routes, Route } from "react-router-dom";
-// import Nav from "./Components/Nav/Nav";
-// import Landing from "./Components/Landing/Landing";
-// import Login from "./Components/Login/Login";
-// import Register from "./Components/Register/Register";
-// import Home from "./Components/Home/Home";
+import TVShows from "./Components/TV.jsx";
+import Movies from './Components/Movies.jsx';
+import NewPopular from './Components/NewPopular.jsx';
+import MyList from './Components/MyList.jsx';
 
-// export default function App() {
-//   return (
-//     <Routes>
-//       <Route path="/" element={<Landing />} />
-//       <Route path="/login" element={<Login />} />
-//       <Route path="/register" element={<Register />} />
-//       <Route path="/home" element={<><Nav /><Home /></>} />
-//     </Routes>
-//   );
-// }
-import { Routes, Route } from "react-router-dom";
+import Nav from './Components/Nav/Nav'
+import './App.css'
 
-import Nav from "./Components/Nav/Nav";
-import Landing from "./Components/Landing/Landing";
-import Login from "./Components/Login/Login";
-import Register from "./Components/Register/Register";
-import Home from "./Components/Home/Home";
-
-export default function App() {
+function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route
-        path="/home"
-        element={
-          <>
-            <Nav />
-            <Home />
-          </>
-        }
-      />
-    </Routes>
-  );
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/home" element={<><Nav /><Home /></>} />
+          <Route path="/tv-shows" element={<><Nav /><TVShows /></>} />
+          <Route path="/movies" element={<><Nav /><Movies /></>} />
+          <Route path="/new-popular" element={<><Nav /><NewPopular /></>} />
+          <Route path="/my-list" element={<><Nav /><MyList /></>} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </div>
+    </Router>
+  )
 }
+
+export default App;

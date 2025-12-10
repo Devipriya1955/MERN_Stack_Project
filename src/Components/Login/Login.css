@@ -12,7 +12,7 @@
 }
 
 .login-logo {
-  height: 55px;
+  height: 45px;
   transition: transform 0.3s;
 }
 
@@ -70,5 +70,9 @@
 @media (max-width: 768px) {
   .login-card {
     padding: 2rem !important;
+  }
+  
+  .login-logo {
+    height: 35px;
   }
 }

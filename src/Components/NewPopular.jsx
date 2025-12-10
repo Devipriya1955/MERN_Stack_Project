@@ -1,5 +1,6 @@
 import Row from '../Components/Row/Row'
-import '../pages/Pages.css'
+import "./Pages.css";
+
 
 function NewPopular() {
   const newReleases = [

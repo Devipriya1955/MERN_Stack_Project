@@ -9,18 +9,16 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Add your authentication logic here
     console.log('Login attempt:', { email, password })
-    // For now, redirect to home page
     navigate('/home')
   }
 
   return (
     <div className="login">
-      <header className="login-header container-fluid px-4 px-lg-5 py-4 d-flex justify-content-between align-items-center">
+      <header className="login-header container-fluid px-4 px-lg-5 py-3 d-flex justify-content-between align-items-center">
         <Link to="/">
           <img 
-            src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" 
+            src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" 
             alt="Netflix" 
             className="login-logo"
           />
