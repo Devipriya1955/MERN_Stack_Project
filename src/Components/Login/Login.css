@@ -1,0 +1,74 @@
+.login {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://assets.nflxext.com/ffe/siteui/vlv3/9d3533c1e2-3e3e-4e1b-9d3f-7e8f9c9d9e9e/9d3531e2-3e3e-4e1b-9d3f-7e8f9c9d9e9e/IN-en-20241021-TRIFECTA-perspective_WEB_9d3531e2-3e3e-4e1b-9d3f-7e8f9c9d9e9e_large.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.login-header {
+  position: relative;
+  z-index: 10;
+}
+
+.login-logo {
+  height: 55px;
+  transition: transform 0.3s;
+}
+
+.login-logo:hover {
+  transform: scale(1.05);
+}
+
+.login-container {
+  min-height: calc(100vh - 100px);
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 450px;
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  border: none;
+  border-radius: 8px;
+}
+
+.login-card .form-control {
+  padding: 18px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.login-card .form-control:focus {
+  background-color: #454545;
+  color: white;
+  box-shadow: none;
+  border: 2px solid #e50914;
+}
+
+.login-card .btn-danger {
+  background-color: #e50914;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.login-card .btn-danger:hover {
+  background-color: #f40612;
+}
+
+.form-check-input {
+  background-color: #333;
+  border-color: #737373;
+}
+
+.form-check-input:checked {
+  background-color: #e50914;
+  border-color: #e50914;
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    padding: 2rem !important;
+  }
+}

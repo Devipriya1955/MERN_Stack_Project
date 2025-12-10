@@ -1,0 +1,17 @@
+.home {
+  background-color: #141414;
+  min-height: 100vh;
+}
+
+.home-rows {
+  padding-bottom: 50px;
+  margin-top: -150px;
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .home-rows {
+    margin-top: -80px;
+  }
+}

@@ -1,0 +1,122 @@
+.row-container {
+  margin-bottom: 40px;
+  padding: 0 60px;
+}
+
+.row-title {
+  color: #e5e5e5;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  transition: color 0.3s;
+  cursor: default;
+}
+
+.row-title:hover {
+  color: white;
+}
+
+.row-posters {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 15px;
+  scroll-behavior: smooth;
+}
+
+.row-posters::-webkit-scrollbar {
+  height: 8px;
+}
+
+.row-posters::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+.row-posters::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.row-posters::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.poster-wrapper {
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.poster-wrapper:hover {
+  transform: scale(1.08);
+  z-index: 10;
+}
+
+.poster {
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s;
+}
+
+.poster:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.poster-large {
+  width: 280px;
+  height: 400px;
+}
+
+.poster-title {
+  color: #e5e5e5;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.poster-large + .poster-title {
+  max-width: 280px;
+}
+
+@media (max-width: 768px) {
+  .row-container {
+    padding: 0 20px;
+  }
+  
+  .row-title {
+    font-size: 1.2rem;
+  }
+  
+  .poster {
+    width: 150px;
+    height: 210px;
+  }
+  
+  .poster-large {
+    width: 200px;
+    height: 280px;
+  }
+  
+  .poster-title {
+    font-size: 0.8rem;
+    max-width: 150px;
+  }
+  
+  .poster-large + .poster-title {
+    max-width: 200px;
+  }
+  
+  .row-posters {
+    gap: 10px;
+  }
+}
